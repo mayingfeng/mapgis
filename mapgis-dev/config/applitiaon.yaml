@@ -1,0 +1,11 @@
+server:
+    port: 8000
+    servlet:
+        context-path: /mapgis
+spring:
+    application:
+        name: mapgis
+    datasource:
+        url: jdbc:postgresql://localhost:5432/mapgis
+        username: postgres
+        password: Mm@618033
