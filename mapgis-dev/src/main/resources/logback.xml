@@ -1,0 +1,15 @@
+<configuration scan="false" scanPeriod="60 seconds" debug="false">
+    <property name="LOG_HOME" value="/logs" />
+    <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n" />
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <FileNamePattern>${LOG_HOME}.%d{yyyy-MM-dd}.%i</FileNamePattern>
+            <MaxHistory>30</MaxHistory>
+            <MaxFileSize>10MB</MaxFileSize>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+</configuration>
