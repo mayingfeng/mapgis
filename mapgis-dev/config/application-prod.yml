@@ -1,0 +1,17 @@
+spring:
+    datasource:
+        url: jdbc:sqlite:D:/App/dataprocess/db/dataprocess.db
+        driver-class-name: org.sqlite.JDBC
+logging:
+    file:
+        path: D:/App/dataprocess/logs
+    level:
+        root: info
+convert:
+    inputRootPath: D:/数据/OSGB数据
+    outputRootPath: D:/数据/地灾三维自动切片缓存
+iserver:
+    url: http://10.27.17.1:8090
+    proxyUrl: http://172.22.100.30:60941/yldz
+    username: ylqadmin
+    password: Zz88921288
